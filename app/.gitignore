@@ -1,1 +1,36 @@
-/build
+# Gradle and build output
+.gradle/
+**/build/
+.kotlin/
+
+# Local Android SDK path (DO NOT COMMIT - machine specific)
+local.properties
+
+# Android Studio / IntelliJ user settings
+.idea/workspace.xml
+.idea/shelf/
+.idea/caches/
+.idea/libraries/
+*.iml
+
+# Generated native build and capture files
+.externalNativeBuild/
+.cxx/
+captures/
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db
+
+# Output packages
+*.apk
+*.aab
+
+# Signing keys and local secrets
+*.jks
+*.keystore
+secrets.properties
+
+# Firebase config (if repository is public/open-source)
+# google-services.json
