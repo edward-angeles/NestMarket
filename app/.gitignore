@@ -33,4 +33,4 @@ Thumbs.db
 secrets.properties
 
 # Firebase config (if repository is public/open-source)
-# google-services.json
+google-services.json
