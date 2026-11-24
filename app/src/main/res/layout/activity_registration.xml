@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -168,10 +167,7 @@
                 app:iconTint="@color/card_white"
                 app:iconSize="22dp"
                 app:iconPadding="8dp"
-                app:iconGravity="textStart"
-
-                app:insetTop="0dp"
-                app:insetBottom="0dp"/>
+                app:iconGravity="textStart" />
 
             <!-- Seller -->
             <com.google.android.material.button.MaterialButton
@@ -194,10 +190,7 @@
                 app:iconTint="@color/primary_green"
                 app:iconSize="22dp"
                 app:iconPadding="8dp"
-                app:iconGravity="textStart"
-
-                app:insetTop="0dp"
-                app:insetBottom="0dp"/>
+                app:iconGravity="textStart" />
 
         </LinearLayout>
 
