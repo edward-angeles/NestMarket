@@ -15,7 +15,7 @@
         android:paddingTop="32dp"
         android:gravity="center_horizontal">
 
-        <!-- Logo -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
             android:textColor="@color/primary_green"
             android:fontFamily="serif"/>
 
-        <!-- Welcome -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
             android:textStyle="bold"
             android:textColor="@color/main_text"/>
 
-        <!-- Subtitle -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
             android:textSize="14sp"
             android:textColor="@color/secondary_text"/>
 
-        <!-- Email Label -->
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -52,7 +52,6 @@
             android:textSize="14sp"
             android:textColor="@color/main_text"/>
 
-        <!-- Email Input -->
         <EditText
             android:layout_width="match_parent"
             android:layout_height="54dp"
@@ -62,7 +61,7 @@
             android:textSize="14sp"
             android:singleLine="true"/>
 
-        <!-- Password Label -->
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -71,7 +70,6 @@
             android:textSize="14sp"
             android:textColor="@color/main_text"/>
 
-        <!-- Password Input -->
         <EditText
             android:layout_width="match_parent"
             android:layout_height="54dp"
@@ -82,8 +80,8 @@
             android:singleLine="true"
             android:inputType="textPassword"/>
 
-        <!-- Login Button -->
-        <TextView
+
+        <Button
             android:layout_width="match_parent"
             android:layout_height="54dp"
             android:layout_marginTop="24dp"
@@ -94,7 +92,6 @@
             android:textSize="16sp"
             android:textStyle="bold"/>
 
-        <!-- Sign Up -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -103,7 +100,7 @@
             android:textSize="14sp"
             android:textColor="@color/secondary_text"/>
 
-        <!-- Forgot Password -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
