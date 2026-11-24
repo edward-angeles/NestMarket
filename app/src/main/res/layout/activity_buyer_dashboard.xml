@@ -1,10 +1,198 @@
+
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BuyerDashboardActivity">
+    android:background="@color/background"
+    android:fillViewport="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- TOP GREETING -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hello"
+                android:textSize="14sp"
+                android:textColor="@color/main_text"/>
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_favorite"
+                android:tint="@color/primary_green"
+                android:contentDescription="Saved items"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Saved"
+                android:textSize="13sp"
+                android:textColor="@color/primary_green"/>
+
+        </LinearLayout>
+
+        <!-- MAIN HEADING -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Discover new furniture"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/main_text"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Find your next favorite"
+            android:textSize="13sp"
+            android:textColor="@color/secondary_text"/>
+
+        <!-- SEARCH AND FILTER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_input"
+                android:paddingHorizontal="12dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_search"
+                    android:tint="@color/secondary_text"
+                    android:contentDescription="Search"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:background="@android:color/transparent"
+                    android:hint="Search Furniture..."
+                    android:textSize="13sp"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/bg_input"
+                android:padding="12dp"
+                android:src="@drawable/ic_search"
+                android:tint="@color/primary_green"
+                android:contentDescription="Filter products"/>
+
+        </LinearLayout>
+
+        <!-- CATEGORIES -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="34dp"
+                    android:background="@drawable/bg_primary_button"
+                    android:gravity="center"
+                    android:text="All"
+                    android:textColor="@color/card_white"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_input"
+                    android:gravity="center"
+                    android:text="Sofas"
+                    android:textColor="@color/main_text"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_input"
+                    android:gravity="center"
+                    android:text="Chairs"
+                    android:textColor="@color/main_text"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_input"
+                    android:gravity="center"
+                    android:text="Tables"
+                    android:textColor="@color/main_text"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="85dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_input"
+                    android:gravity="center"
+                    android:text="Storage"
+                    android:textColor="@color/main_text"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <!-- SECTION TITLE -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="Recently Added"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/main_text"/>
+
+        <!-- PRODUCT RECYCLER VIEW -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"/>
+
+    </LinearLayout>
+
+</ScrollView>

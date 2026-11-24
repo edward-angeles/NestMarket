@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true"
+    tools:context=".ProductDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Back Button -->
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="‹  Back"
+            android:textColor="@color/primary_green"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Product Image -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="260dp">
+
+            <ImageView
+                android:id="@+id/imgProduct"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_product_image"
+                android:scaleType="centerCrop"
+                android:contentDescription="Furniture product image"
+                tools:src="@drawable/bg_product_image" />
+
+            <ImageView
+                android:id="@+id/btnFavorite"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="top|end"
+                android:layout_margin="12dp"
+                android:background="@drawable/bg_input"
+                android:padding="10dp"
+                android:src="@drawable/ic_favorite"
+                android:tint="@color/primary_green"
+                android:contentDescription="Add to favorites" />
+
+        </FrameLayout>
+
+        <!-- Product Name and Price -->
+        <TextView
+            android:id="@+id/txtProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Vintage Lounge Chair"
+            tools:text="Vintage Lounge Chair"
+            android:textColor="@color/main_text"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtProductPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="$85.00"
+            tools:text="$85.00"
+            android:textColor="@color/primary_green"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Condition and Location -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txtProductCondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_accent_button"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="7dp"
+                android:text="Good condition"
+                tools:text="Good condition"
+                android:textColor="@color/card_white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txtProductLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:text="Montreal, QC"
+                tools:text="Montreal, QC"
+                android:textColor="@color/secondary_text"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- Description -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="Description"
+            android:textColor="@color/primary_green"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtProductDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="A beautiful vintage lounge chair in good condition. Comfortable, stylish and perfect for adding character to your living space."
+            tools:text="A beautiful vintage lounge chair in good condition."
+            android:textColor="@color/main_text"
+            android:textSize="14sp"
+            android:lineSpacingExtra="5dp" />
+
+        <!-- Seller Information -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="Seller Information"
+            android:textColor="@color/primary_green"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_accent_button"
+                android:gravity="center"
+                android:text="S"
+                android:textColor="@color/card_white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtSellerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sarah Miller"
+                    tools:text="Sarah Miller"
+                    android:textColor="@color/main_text"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Furniture Seller"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Add to Cart -->
+        <Button
+            android:id="@+id/btnAddToCart"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/bg_primary_button"
+            android:backgroundTint="@null"
+            android:text="Add to Cart"
+            android:textAllCaps="false"
+            android:textColor="@color/card_white"
+            android:textSize="16sp" />
+
+        <!-- Add to Wishlist -->
+        <Button
+            android:id="@+id/btnAddToWishlist"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_accent_button"
+            android:backgroundTint="@null"
+            android:text="Add to Wishlist"
+            android:textAllCaps="false"
+            android:textColor="@color/card_white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>

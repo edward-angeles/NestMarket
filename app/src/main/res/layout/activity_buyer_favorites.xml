@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:padding="20dp"
+    tools:context=".BuyerFavoritesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="‹"
+            android:textColor="@color/primary_green"
+            android:textSize="32sp"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="My Favorites"
+            android:textColor="@color/primary_green"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_favorite"
+            android:tint="@color/primary_green"
+            android:contentDescription="Favorites" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Furniture you've saved for later"
+        android:textColor="@color/secondary_text"
+        android:textSize="14sp"
+        android:layout_marginBottom="20dp" />
+
+
+    <TextView
+        android:id="@+id/txtFavoritesCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your saved items"
+        android:textColor="@color/main_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="14dp"
+        tools:text="Your saved items (4)" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFavorites"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        android:nestedScrollingEnabled="true"
+        android:overScrollMode="never"
+        tools:listitem="@layout/item_product"
+        tools:itemCount="4" />
+
+
+    <LinearLayout
+        android:id="@+id/layoutEmptyFavorites"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_favorite"
+            android:tint="@color/accent_green"
+            android:contentDescription="Empty favorites" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="No favorites yet"
+            android:textColor="@color/main_text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Explore furniture and save your favorite pieces here."
+            android:textColor="@color/secondary_text"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
