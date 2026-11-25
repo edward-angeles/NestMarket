@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
+    android:fitsSystemWindows="true"
     android:fillViewport="true">
 
     <LinearLayout
@@ -57,6 +58,7 @@
 
         <!-- Full Name Input -->
         <EditText
+            android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="54dp"
             android:layout_marginTop="4dp"
@@ -77,6 +79,7 @@
 
         <!-- Email Input -->
         <EditText
+            android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="54dp"
             android:layout_marginTop="4dp"
@@ -98,6 +101,7 @@
 
         <!-- Password Input -->
         <EditText
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="54dp"
             android:layout_marginTop="4dp"
@@ -119,6 +123,7 @@
 
         <!-- Confirm Password Input -->
         <EditText
+            android:id="@+id/etConfirmPassword"
             android:layout_width="match_parent"
             android:layout_height="54dp"
             android:layout_marginTop="4dp"
@@ -135,9 +140,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
             android:text="I want to join as a:"
+            android:textColor="@color/main_text"
             android:textSize="14sp"
-            android:textStyle="bold"
-            android:textColor="@color/main_text"/>
+            android:textStyle="bold" />
 
         <!-- Buyer and Seller Selection -->
         <LinearLayout
@@ -155,16 +160,16 @@
                 android:layout_weight="1"
 
                 android:text="Buyer"
-                android:textColor="@color/card_white"
+                android:textColor="@color/primary_green"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textAllCaps="false"
 
-                app:backgroundTint="@color/primary_green"
+                app:backgroundTint="@color/card_white"
                 app:cornerRadius="11dp"
 
                 app:icon="@drawable/ic_buyer"
-                app:iconTint="@color/card_white"
+                app:iconTint="@color/primary_green"
                 app:iconSize="22dp"
                 app:iconPadding="8dp"
                 app:iconGravity="textStart" />
@@ -195,25 +200,37 @@
         </LinearLayout>
 
         <!-- Create Account Button -->
-        <TextView
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCreateAccount"
             android:layout_width="match_parent"
             android:layout_height="54dp"
             android:layout_marginTop="26dp"
-            android:background="@drawable/bg_primary_button"
-            android:gravity="center"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
             android:text="Create Account"
             android:textColor="@color/card_white"
             android:textSize="16sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:letterSpacing="0"
+            android:fontFamily="sans-serif"
+            android:stateListAnimator="@null"
+            app:backgroundTint="@color/primary_green"
+            app:cornerRadius="11dp"
+             />
 
         <!-- Login Link -->
         <TextView
+            android:id="@+id/tvLogInRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
             android:text="Already have an account? Log in"
             android:textSize="14sp"
-            android:textColor="@color/secondary_text"/>
+            android:clickable="true"
+            android:focusable="true"
+            android:textColor="@color/secondary_text"
+             />
 
     </LinearLayout>
 

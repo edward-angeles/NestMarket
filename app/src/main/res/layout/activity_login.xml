@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
+    android:fitsSystemWindows="true"
     android:fillViewport="true">
 
     <LinearLayout
@@ -52,6 +54,7 @@
             android:textColor="@color/main_text"/>
 
         <EditText
+            android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="54dp"
             android:layout_marginTop="4dp"
@@ -71,6 +74,7 @@
             android:textColor="@color/main_text"/>
 
         <EditText
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="54dp"
             android:layout_marginTop="4dp"
@@ -82,33 +86,46 @@
             android:inputType="textPassword"/>
 
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogIn"
             android:layout_width="match_parent"
             android:layout_height="54dp"
             android:layout_marginTop="24dp"
-            android:background="@drawable/bg_primary_button"
-            android:gravity="center"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
             android:text="Log In"
             android:textColor="@color/card_white"
             android:textSize="16sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:letterSpacing="0"
+            android:fontFamily="sans-serif"
+            android:stateListAnimator="@null"
+            app:backgroundTint="@color/primary_green"
+            app:cornerRadius="11dp"
+            app:elevation="0dp" />
 
         <TextView
+            android:id="@+id/tvSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
-            android:text="Don't have an account? Sign up"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Don&apos;t have an account? Sign up"
             android:textSize="14sp"
-            android:textColor="@color/secondary_text"/>
-
+            android:textColor="@color/secondary_text" />
 
         <TextView
+            android:id="@+id/tvForgotPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:focusable="true"
             android:text="Forgot your password?"
             android:textSize="14sp"
-            android:textColor="@color/primary_green"/>
+            android:textColor="@color/primary_green" />
 
     </LinearLayout>
 

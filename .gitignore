@@ -28,3 +28,6 @@ Thumbs.db
 *.jks
 *.keystore
 secrets.properties
+
+# Firebase config (if repository is public/open-source)
+google-services.json
